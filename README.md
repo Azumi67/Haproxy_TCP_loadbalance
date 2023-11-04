@@ -63,7 +63,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/285cdb94-37f8-493a-9c15-e3b2b202fdd4" alt="Image" />
+  <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/35a672d4-e084-46fd-9179-91647081c084" alt="Image" />
 </p>
  <div dir="rtl">&bull; ایپی 6 های خارجی که ساختید را اضافه نمایید. من تعداد را 2 انتخاب کردم</div>
  <div dir="rtl">&bull;میتوانید از پورت های یکسان یا برای هر ایپی 6 خارج از یک پورت جداگانه بر اساس کانفیگی که دارید، استفاده نمایید</div>

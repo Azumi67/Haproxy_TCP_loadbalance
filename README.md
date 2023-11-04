@@ -20,7 +20,6 @@
  <div dir="rtl">&bull; مشاهده وضعیت لودبالانس</div>
  
 
- ![R (6)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/6ff6f48d-4677-4cee-b138-db51d19fce79)  [تانل RTT -Radkesvat](https://github.com/radkesvat)
 
  
  ------------------------------------------------------

@@ -10,7 +10,7 @@
 **دسترسی سریع به اسکریپت**
 
 
-- [کلیک - click](https://github.com/Azumi67/6TO4-PrivateIP/blob/main/README.md#%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA-%D9%85%D9%86)
+- [کلیک - click](https://github.com/Azumi67/Haproxy_TCP_loadbalance#%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA-%D9%85%D9%86)
 ------------------------
 ![check](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/13de8d36-dcfe-498b-9d99-440049c0cf14)
 **امکانات**
@@ -110,7 +110,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/opiran-club/softether/main/o
 
 
 ```
-
+apt install python3 -y && apt install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)
 ```
 
 

@@ -185,6 +185,7 @@ def remove_menu():
     print('2. \033[93mUninstall Priavte IP\033[0m')
     print('3. \033[92mUninstall Native IP\033[0m')
     print('4. \033[94mback to the main menu\033[0m')
+    print("\033[93m╰───────────────────────────────────────╯\033[0m")
 
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
@@ -364,6 +365,7 @@ def restart_service():
     print('1. \033[92mStart | Restart Service\033[0m')
     print('2. \033[91mStop Service\033[0m')
     print('3. \033[94mback to the main menu\033[0m')
+    print("\033[93m╰───────────────────────────────────────╯\033[0m")
 
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
@@ -420,6 +422,7 @@ def private_ip():
     print('2. \033[92mKharej[Private IP]\033[0m')
     print('3. \033[93mIRAN [Private IP]\033[0m')
     print('4. \033[94mback to the main menu\033[0m')
+    print("\033[93m╰───────────────────────────────────────╯\033[0m")
 
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')

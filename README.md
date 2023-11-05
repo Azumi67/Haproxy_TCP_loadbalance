@@ -14,8 +14,8 @@
 ------------------------
 ![check](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/13de8d36-dcfe-498b-9d99-440049c0cf14)
 **امکانات**
- <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 در سرور خارج بدون تانل</div>
- <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 در سرور ایران با تانل</div>
+ <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 native یا private در سرور خارج بدون تانل</div>
+ <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 native یا private در سرور ایران با تانل</div>
  <div dir="rtl">&bull; امکان حذف سرویس و استارت و استاپ</div>
  <div dir="rtl">&bull; مشاهده وضعیت لودبالانس</div>
 

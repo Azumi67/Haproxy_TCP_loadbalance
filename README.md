@@ -85,8 +85,8 @@
  ---------------------------------------
  
 
-لود بالانس -سرور ایران - تانل - با Kharej Native IPV6 و Iran Tunnel Broker IPV6
----------------------------------------
+**لود بالانس -سرور ایران - تانل - با Kharej Native IPV6 و Iran Tunnel Broker IPV6**
+
 
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/902a2efa-f48f-4048-bc2a-5be12143bef3) **افزودن ایپی 6 native اضافه در سرور خارج**
 

@@ -76,6 +76,7 @@
 <p align="right">
   <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/0e51b7a3-23fe-40ca-8f0a-0e7fe99138f4" alt="Image" />
 </p>
+<div dir="rtl">&bull;لطفا برای استفاده از این رو، طبق اموزش نخست برای سرور خارج و ایران ایپی پرایوت بسازید</div>
  <div dir="rtl">&bull;از ایپی پرایوت هایی که برای سرور خارج ساختیم ، در لود بالانس استفاده میکنیم</div>
  <div dir="rtl">&bull; ایپی 4 سرور ایران و خارج را وارد می کنید</div>
  <div dir="rtl">&bull; پورت کانفیگ های خارج را میدهید. به طور مثال من دو کانفیگ vmess با پورت های 8080 و 8081 ساخته بودم و به ازای هر ایپی 6 پرایوت ، پورت جداگانه وارد میکنم. </div>
@@ -104,7 +105,7 @@
 ----------------------
 
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/49000de2-53b6-4c5c-888d-f1f397d77b92)**ساخت 
- لودبالانس و تانل در سرور ایران**
+ لودبالانس و تانل در سرور ایران با استفاده از Native IPV6 یا تانل بروکر**
 
 
 <p align="right">
@@ -119,7 +120,7 @@
   <div dir="rtl">&bull; در تمام کانفیگ های موجود با پورت های متفاوت در قسمت ادرس کلاینت v2rayng از ipv4-iran:443 استفاده میکنید</div>
 
 --------------------------------------
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815)**ساخت لودبالانس در سرور خارج بدون تانل**
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815) **ساخت لودبالانس در سرور خارج بدون تانل - با استفاده از Native IPV6**
 
 
 <p align="right">

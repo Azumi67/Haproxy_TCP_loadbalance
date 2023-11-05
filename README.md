@@ -118,6 +118,10 @@ apt install python3 -y && apt install pip -y &&  pip install colorama && pip ins
 python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)
 ```
 
+ <div dir="rtl">&bull; اگر سرور شما خطای externally-managed-environment داد از دستور زیر اقدام به اجرای اسکریپت نمایید.</div>
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/managed.sh)"
+```
 ---------------------------------------------
 ![R (7)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/42c09cbb-2690-4343-963a-5deca12218c1)
 **تلگرام** 

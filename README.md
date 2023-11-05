@@ -151,7 +151,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/opiran-club/softether/main/o
 apt install python3 -y && apt install pip -y &&  pip install colorama && pip install netifaces && apt install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)
 ```
 
- <div dir="rtl">&bull;  دستور زیر برای کسانی هست که پیش نیاز ها را در سرور نصب شده دارند</div>
+ <div dir="rtl">&bull;  دستور زیر برای کسانی هست که پیش نیاز ها را در سرور، نصب شده دارند</div>
  
 ```
 python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)

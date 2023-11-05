@@ -1,5 +1,5 @@
 ![R (2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/a064577c-9302-4f43-b3bf-3d4f84245a6f)
-نام پروژه : لودبالانس Haproxy مناسب برای V2ray با تانل و بدون تانل [پورت فوروارد]
+نام پروژه : لودبالانس Haproxy مناسب برای V2ray با تانل و بدون تانل  [پورت فوروارد]
 ---------------------------------------------------------------
 ![lang](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/627ecb66-0445-4c15-b2a0-59e02c7f7e09)
 **زبان - Languages**
@@ -26,6 +26,7 @@
   
   ![6348248](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/398f8b07-65be-472e-9821-631f7b70f783)
 **آموزش**
+
 **لود بالانس در سرور ایران**
 - باید سرور خارج و ایران هر دو ایپی 6 داشته باشند. اگر سرور شما ایپی 6 ندارد. لطفه با پرایوت ایپی این امکان را برای سرورتان را فراهم نمایید یا از تانل بروکر استفاده کنید
 - از ایپی 6 native برای لود بالانس استفاده میشود و نیازی به استفاده از ایپی پرایوت هایی که ساختید نیست
@@ -33,6 +34,35 @@
 
 **لود بالانس در سرور خارج**
 - شما تنها نیاز هست که سرور خارجتان ایپی 6 native داشته باشد و نیازی به سرور ایران ندارید
+----------------------------------
+- اگر سرور ایران و خارج شما، ایپی 6 نداشت لطفا برای ارتباط بین دو سرور، نخست پرایوت ایپی بسازید.
+  
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/902a2efa-f48f-4048-bc2a-5be12143bef3) **ساخت پرایوت ایپی سرور خارج**
+
+ 
+
+ <p align="right">
+  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/bd974599-9dde-4377-9c06-480ebd7533ff" alt="Image" />
+</p>
+ <div dir="rtl">&bull;در این روش، از پرایوت ایپی برای ارتباط با تانل و از ایپی 6 NATIVE برای لودبالانس استفاده خواهیم کرد  </div>
+  <div dir="rtl">&bull; برای ساخت پرایوت ایپی از سرور خارج شروع نمایید</div>
+   <div dir="rtl">&bull;ایپی 4 سرور ایران و خارج را وارد نمایید </div>
+    <div dir="rtl">&bull; تعداد ایپی پرایوت مورد نیاز خود را وارد نمایید</div>
+
+
+----------------------
+
+![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/49000de2-53b6-4c5c-888d-f1f397d77b92)**ساخت پرایوت ایپی سرور ایران**
+
+
+<p align="right">
+  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/a331964f-acb1-4783-9f56-776b4cda0d74" alt="Image" />
+</p>
+ <div dir="rtl">&bull; برای سرور ایران هم مانند سرور خارج، پرایوت ایپی میسازیم</div>
+ <div dir="rtl">&bull; ایپی 4 سرور ایران و خارج را وارد می کنید</div>
+   <div dir="rtl">&bull; تعداد ایپی پرایوتی که میخواهید را وارد نمایید</div>
+
+--------------------------------------
  
 
 لود بالانس -سرور ایران - تانل
@@ -120,14 +150,19 @@ bash <(curl -s -L https://raw.githubusercontent.com/opiran-club/softether/main/o
 ```
 apt install python3 -y && apt install pip -y &&  pip install colorama && pip install netifaces && apt install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)
 ```
+
+ <div dir="rtl">&bull;  دستور زیر برای کسانی هست که پیش نیاز ها را در سرور نصب شده دارند</div>
+ 
 ```
 python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/haproxy.py --ipv4)
 ```
 
  <div dir="rtl">&bull; اگر سرور شما خطای externally-managed-environment داد از دستور زیر اقدام به اجرای اسکریپت نمایید.</div>
+ 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Haproxy_TCP_loadbalance/main/managed.sh)"
 ```
+
 ---------------------------------------------
 ![R (7)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/42c09cbb-2690-4343-963a-5deca12218c1)
 **تلگرام** 

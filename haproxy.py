@@ -741,7 +741,7 @@ def Native_menu():
 
         confirm = input("\033[93mAre these your current IPv6 addresses? (y/n): \033[0m")
         if confirm.lower() != "y":
-            print("\033[91mAborted. Please manually configure the correct IPv6 addresses.\033[0m")
+            display_error("\033[91mAborted. Please manually configure the correct IPv6 addresses.\033[0m")
             return
 
         sorted_addresses = sorted(ipv6_addresses, reverse=True)
@@ -756,7 +756,7 @@ def Native_menu():
                 break
 
         if not additional_address:
-            print("\033[91mNo additional address to add.\033[0m")
+            display_error("\033[91mNo additional address to add.\033[0m")
             return
 
         subprocess.run(["ip", "addr", "add", f"{additional_address}/64", "dev", interface])
@@ -769,13 +769,13 @@ def Native_menu():
 
         subprocess.run("crontab -l | grep -v '/etc/ipv6.sh' | crontab -", shell=True)
 
-        print("\033[93mAdding cron job for the server...\033[0m")
+        display_notification("\033[93mAdding cronjob for the server..\033[0m")
         subprocess.run("(crontab -l 2>/dev/null; echo \"@reboot /bin/bash /etc/ipv6.sh\") | crontab -", shell=True)
 
-        print("\033[92mIPv6 addresses added successfully!\033[0m")
+        display_checkmark("\033[92mIPv6 addresses added successfully!\033[0m")
     except ValueError as e:
-        print("\033[91mAn error occurred while adding IPv6 addresses:", str(e), "\033[0m")
-
+        display_error("\033[91mAn error occurred while adding IPv6 addresses:", str(e), "\033[0m")
+        
 def get_ipv4():
     interfaces = ni.interfaces()
     for interface in interfaces:

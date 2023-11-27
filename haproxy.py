@@ -296,14 +296,19 @@ def extra_uninstall():
 
   
     
-#for later usage
+#for later usage  ## lets fix this too
 def frp_menu():
     def stop_loading():
         display_error("Installation process interrupted.")
         exit(1)
 
-    subprocess.call('sysctl -w net.ipv4.ip_forward=1 &>/dev/null', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    subprocess.call('sysctl -w net.ipv6.conf.all.forwarding=1 &>/dev/null', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    ipv4_forward_status = subprocess.run(["sysctl", "net.ipv4.ip_forward"], capture_output=True, text=True)
+    if "net.ipv4.ip_forward = 0" not in ipv4_forward_status.stdout:
+        subprocess.run(["sudo", "sysctl", "-w", "net.ipv4.ip_forward=1"])
+
+    ipv6_forward_status = subprocess.run(["sysctl", "net.ipv6.conf.all.forwarding"], capture_output=True, text=True)
+    if "net.ipv6.conf.all.forwarding = 0" not in ipv6_forward_status.stdout:
+        subprocess.run(["sudo", "sysctl", "-w", "net.ipv6.conf.all.forwarding=1"])
 
     with open('/etc/resolv.conf', 'w') as resolv_file:
         resolv_file.write("nameserver 8.8.8.8\n")

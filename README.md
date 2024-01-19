@@ -27,31 +27,39 @@
   - اگر تنها از یک پورت و یک سرور استفاده میکنید، تنها کافی هست برای آن پورت تعداد ایپی 6 های متفاوت یا قلوتینگ ایپی بدهید.
   - اگر سرور ایران شما ایپی 6 ندارد، از تانل بروکر هم میتوانید استفاده کنید.
   -------------------
-  ![6348248](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/398f8b07-65be-472e-9821-631f7b70f783)
-**آموزش**
+  <div align="right">
+  <details>
+    <summary><strong>توضیحات</strong></summary>
+  
+
+
 
 **لود بالانس در سرور ایران با native ipv6 و تانل**
 - باید سرور خارج و ایران هر دو ایپی 6 داشته باشند. اگر سرور ایران شما ایپی 6 ندارد از تانل بروکر استفاده نمایید.
 - از ایپی 6 native خارج برای لود بالانس استفاده میشود و نیازی به استفاده از ایپی پرایوت هایی که ساختید نیست
 
-
 **لود بالانس در سرور خارج با native ipv6 بدون تانل**
 
 - شما تنها نیاز هست که سرور خارجتان ایپی 6 native داشته باشد و نیازی به سرور ایران ندارید
-
 
 **لود بالانس در سرور ایران با پرایوت ایپی با تانل**
   
  - لطفا طبق اموزش پایین در سرور خارج و ایران، پرایوت ایپی بسازید .
  - سپس در سرور ایران از پرایوت ایپی خارج برای لود بالانس استفاده نمایید. به اموزش مربوطه مراجعه کنید.
-----------------------------------
-![Exclamation-Mark-PNG-Clipart](https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/08ce090d-b45e-4662-9dab-44771a00ccca) سوال اینجاست که Native IPV6 چیست ؟ به زبان ساده ایپی 6 ای که دیتاسنتر برای سرور شما اختصاص داده است. برای اطلاعات بیشتر در مورد آن در گوگل مطالعه بفرمایید
+  
+  </details>
+</div>
 
-----------------------------------
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/902a2efa-f48f-4048-bc2a-5be12143bef3) **ساخت پرایوت ایپی سرور خارج** 
+----------------
+  
+  ![6348248](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/398f8b07-65be-472e-9821-631f7b70f783)
+**آموزش**
+-
 
- 
-
+ <div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> ساخت پرایوت ایپی سرور خارج</summary>
+  
  <p align="right">
   <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/bd974599-9dde-4377-9c06-480ebd7533ff" alt="Image" />
 </p>
@@ -60,21 +68,24 @@
    <div dir="rtl">&bull;ایپی 4 سرور ایران و خارج را وارد نمایید </div>
     <div dir="rtl">&bull; تعداد ایپی پرایوت مورد نیاز خود را وارد نمایید. به طور مثال 3 تا</div>
 
+ </details>
+</div>
 
-----------------------
+ <div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong>ساخت پرایوت ایپی سرور ایران </summary>
 
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/49000de2-53b6-4c5c-888d-f1f397d77b92)**ساخت پرایوت ایپی سرور ایران**
-
-
-<p align="right">
-  <img src="https://github.com/Azumi67/RTT-Wireguard/assets/119934376/a331964f-acb1-4783-9f56-776b4cda0d74" alt="Image" />
-</p>
  <div dir="rtl">&bull; برای سرور ایران هم مانند سرور خارج، پرایوت ایپی میسازیم</div>
  <div dir="rtl">&bull; ایپی 4 سرور ایران و خارج را وارد می کنید</div>
    <div dir="rtl">&bull; تعداد ایپی پرایوتی که میخواهید را وارد نمایید مانند سرور خارج 3 تا</div>
+   
+  </details>
+</div>
 
---------------------------------------
-**لود بالانس -سرور ایران - تانل - با استفاده از پرایوت ایپی**
+
+<div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> لود بالانس -سرور ایران - تانل - با استفاده از پرایوت ایپی</summary>
 
 <p align="right">
   <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/0e51b7a3-23fe-40ca-8f0a-0e7fe99138f4" alt="Image" />
@@ -87,16 +98,17 @@
 
    ![Exclamation-Mark-PNG-Clipart](https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/e0edf4ed-6023-4d7f-98ad-d0f45e57bb73)**اگر اتصال در کلاینت v2rayng یا nekoray برقرار نشد ، لطفا با دستور systemctl restart haproxy یک بار آن را ریست کنید و دوباره تست کنید** 
 
-   
- ---------------------------------------
- 
+  </details>
+</div>
 
-**لود بالانس -سرور ایران - تانل - با Kharej Native IPV6 و Iran Tunnel Broker IPV6**
+<div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> لود بالانس -سرور ایران - تانل - با Kharej Native IPV6 و Iran Tunnel Broker IPV6</summary>
+ 
 
 
 ![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/902a2efa-f48f-4048-bc2a-5be12143bef3) **افزودن ایپی 6 native اضافه در سرور خارج**
 
- 
 
  <p align="right">
   <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/4e7bcf1c-275e-4226-9b5e-99d2f9b3bee3" alt="Image" />
@@ -106,12 +118,13 @@
   <div dir="rtl">&bull;برای لودبالانس چه تانل و غیر تانل باید در سرور خارج ، ایپی 6 اضافه نمایید</div>
   <div dir="rtl">&bull; اگر به هر صورت برای سرور خارج شما کار نکرد، لطفا به صورت دستی اضافه نمایید یا از اسکریپت اپیران که در قسمت اسکریپت های کارامد قرارداده ام، استفاده نمایید.</div>
 
+  </details>
+</div>
 
-----------------------
-
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/49000de2-53b6-4c5c-888d-f1f397d77b92)**ساخت 
- لودبالانس و تانل در سرور ایران با استفاده از Native IPV6 یا تانل بروکر**
-
+ <div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> ساخت 
+ لودبالانس و تانل در سرور ایران با استفاده از Native IPV6 یا تانل بروکر</summary>
 
 <p align="right">
   <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/cd0f6394-b322-47eb-bb1c-a3c05009a0a7" alt="Image" />
@@ -124,8 +137,12 @@
    <div dir="rtl">&bull;در آخر هم ایپی 4 سرور ایران و پورتی که انتخاب کردید به شما نمایش داده میشد. میتوانید از ان به جای ادرس کلاینت V2RAYNG استفاده نمایید</div>
   <div dir="rtl">&bull; در تمام کانفیگ های موجود با پورت های متفاوت در قسمت ادرس کلاینت v2rayng از ipv4-iran:443 استفاده میکنید</div>
 
---------------------------------------
-![green-dot-clipart-3](https://github.com/Azumi67/6TO4-PrivateIP/assets/119934376/c14c77ec-dc4e-4c8a-bdc2-4dc4e42a1815) **ساخت لودبالانس در سرور خارج بدون تانل - با استفاده از Native IPV6**
+  </details>
+</div>
+
+ <div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong>اخت لودبالانس در سرور خارج بدون تانل - با استفاده از Native IPV6  </summary>
 
 
 <p align="right">
@@ -139,18 +156,34 @@
    <div dir="rtl">&bull; در تمام کانفیگ های موجود با پورت های متفاوت در قسمت ادرس کلاینت v2rayng از ipv4-kharej:443 استفاده میکنید</div>
 
 
----------------------------------
+  </details>
+</div>
+
+ <div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 4</summary>
 
 
+ <p align="right">
+  <img src="https://github.com/Azumi67/Direct_Chisel/assets/119934376/81e681bf-36c6-4963-86e7-d407bd00fa2c" alt="Image" />
+</p>
 **اسکرین شات**
 <details>
   <summary align="right">Click to reveal image</summary>
-  
+
+
   <p align="right">
-    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/6062b7ba-635d-4611-96de-6a948a55db88" alt="menu screen" />
+    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/32197c6a-acf6-41f4-9e7e-36b046ab0050" alt="menu screen" />
   </p>
 </details>
 
+- تعداد کانفیگ های خود را وارد کنید
+- ایپی 4 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
+- پورت ایران را هم انتخاب میکنیم.
+- ایپی ایران و پورت ایران ادرس جدید شما برای کانفیگ هایتان است.
+
+  </details>
+</div>
 
 ------------------------------------------
 ![scri](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/cbfb72ac-eff1-46df-b5e5-a3930a4a6651)

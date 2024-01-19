@@ -1,10 +1,6 @@
 ![R (2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/a064577c-9302-4f43-b3bf-3d4f84245a6f)
 نام پروژه : لودبالانس Haproxy مناسب برای V2ray با تانل و بدون تانل  [پورت فوروارد]
 ---------------------------------------------------------------
-![lang](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/627ecb66-0445-4c15-b2a0-59e02c7f7e09)
-**زبان - Languages**
-
-- [زبان English]
 ------------------------
 ![R (a2)](https://github.com/Azumi67/RTT-Wireguard/assets/119934376/3f64bfa8-3785-4a0b-beba-366b3cb73719)
 **دسترسی سریع به اسکریپت**
@@ -16,6 +12,7 @@
 **امکانات**
  <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 native یا private در سرور خارج بدون تانل</div>
  <div dir="rtl">&bull;امکان لود بالانس با ایپی 6 native یا private در سرور ایران با تانل</div>
+ <div dir="rtl">&bull;امکان تانل ساده با IPV4</div>
  <div dir="rtl">&bull; امکان حذف سرویس و استارت و استاپ</div>
  <div dir="rtl">&bull; مشاهده وضعیت لودبالانس</div>
 

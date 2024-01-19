@@ -986,7 +986,7 @@ def haproxy2_menu():
     subprocess.run("clear", shell=True)
     print("\033[92m ^ ^\033[0m")
     print("\033[92m(\033[91mO,O\033[92m)\033[0m")
-    print("\033[92m(   ) \033[93mHaproxy Loadbalance & IPV4 Tunnel Menu\033[0m")
+    print("\033[92m(   ) \033[93mHaproxy Simple IPV4 Tunnel Menu\033[0m")
     print("\033[92m \"-\"\033[93m════════════════════════════════════\033[0m")
     display_notification("\033[93mConfigruing Haproxy...\033[0m")
     install_haproxy()

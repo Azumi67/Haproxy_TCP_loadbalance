@@ -164,18 +164,12 @@
     <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 4</summary>
 
 
- <p align="right">
-  <img src="https://github.com/Azumi67/Direct_Chisel/assets/119934376/81e681bf-36c6-4963-86e7-d407bd00fa2c" alt="Image" />
-</p>
-**اسکرین شات**
-<details>
-  <summary align="right">Click to reveal image</summary>
 
 
   <p align="right">
     <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/32197c6a-acf6-41f4-9e7e-36b046ab0050" alt="menu screen" />
   </p>
-</details>
+
 
 - تعداد کانفیگ های خود را وارد کنید
 - ایپی 4 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
@@ -186,6 +180,19 @@
 </div>
 
 ------------------------------------------
+
+
+**اسکرین شات**
+
+<details>
+  <summary align="right">برای مشاهده اسکرین کلیک کنید</summary>
+  
+  <p align="right">
+    <img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/9e744610-6651-4f20-8375-20505742cbbf" alt="menu screen" />
+  </p>
+</details>
+
+---------------
 ![scri](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/cbfb72ac-eff1-46df-b5e5-a3930a4a6651)
 **اسکریپت های کارآمد :**
 - این اسکریپت ها optional میباشد.

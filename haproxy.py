@@ -157,8 +157,8 @@ def main_menu():
             print(footer)
             print(border)
             print("1. \033[92mPrivate | Native IP\033[0m")
-            print("2. \033[93mHaproxy Simpe tunnel | \033[92m IPV4 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
-            print("3. \033[96mHaproxy Simpe tunnel | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
+            print("2. \033[93mHaproxy Simple tunnel | \033[92m IPV4 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
+            print("3. \033[96mHaproxy Simple tunnel | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
             print("4. \033[93mHaproxy loadbalance  | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
             print("6. \033[97mHaproxy Loadbalance \033[93m| \033[92mNo Tunnel \033[93m| \033[96mRun on Kharej\033[0m")
             print("7. \033[93mStop | Start | Restart Service\033[0m")
@@ -989,27 +989,30 @@ def haproxy_menu():
     else:
         print("\033[93mUnable to retrieve server's IPv4 address.\033[0m")
 
-def haproxy2_menu():
+def haproxy3_menu():
     subprocess.run("clear", shell=True)
     print("\033[92m ^ ^\033[0m")
     print("\033[92m(\033[91mO,O\033[92m)\033[0m")
-    print("\033[92m(   ) \033[93mHaproxy Simple IPV4 Tunnel Menu\033[0m")
+    print("\033[92m(   ) \033[93mHaproxy Simple \033[92mIPV6 Tunnel\033[93m Menu\033[0m")
     print("\033[92m \"-\"\033[93m════════════════════════════════════\033[0m")
     display_notification("\033[93mConfiguring Haproxy...\033[0m")
     install_haproxy()
-    print("\033[93m╭──────────────────────────────────────────────────────────╮\033[0m")
+    print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     num_ipv6 = int(input("\033[93mEnter the number of \033[92mKharej \033[96mConfigs\033[93m:\033[0m "))
-    ipv6_addresses = []
+    ipv4_address = input("\033[93mEnter \033[92mKharej\033[93m IPV6 address: " + "\033[0m")
     ipv6_ports = []
     iran_ports = []
 
     for i in range(num_ipv6):
-        address = input("\033[93m" + f"Enter \033[92mKharej\033[93m IPV4 address: " + "\033[0m")
+        print("\033[93m──────────────────────────────\033[0m")
+        print(f"\033[92m      --- Config\033[96m {i+1}\033[92m ---\033[0m")
+        print("\033[93m──────────────────────────────\033[0m")
         port = input("\033[93m" + f"Enter\033[92m Kharej\033[93m Config \033[92m{i+1}\033[93m port: " + "\033[0m")
-        ipv6_addresses.append(address)
         ipv6_ports.append(port)
         iran_port = input(f"\033[93mEnter \033[92mhaproxy \033[93mport \033[96mConfig \033[92m{i+1}\033[93m: \033[0m")
         iran_ports.append(iran_port)
+
+    ipv6_addresses = [ipv4_address] * num_ipv6
 
     config = haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_ports)
 
@@ -1031,27 +1034,30 @@ def haproxy2_menu():
         print("\033[93mUnable to retrieve server's IPv4 address.\033[0m")
         
 
-def haproxy3_menu():
+def haproxy2_menu():
     subprocess.run("clear", shell=True)
     print("\033[92m ^ ^\033[0m")
     print("\033[92m(\033[91mO,O\033[92m)\033[0m")
-    print("\033[92m(   ) \033[93mHaproxy Simple IPV6 Tunnel Menu\033[0m")
+    print("\033[92m(   ) \033[93mHaproxy Simple \033[92mIPV4 Tunnel\033[93m Menu\033[0m")
     print("\033[92m \"-\"\033[93m════════════════════════════════════\033[0m")
     display_notification("\033[93mConfiguring Haproxy...\033[0m")
     install_haproxy()
-    print("\033[93m╭──────────────────────────────────────────────────────────╮\033[0m")
+    print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     num_ipv6 = int(input("\033[93mEnter the number of \033[92mKharej \033[96mConfigs\033[93m:\033[0m "))
-    ipv6_addresses = []
+    ipv4_address = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: " + "\033[0m")
     ipv6_ports = []
     iran_ports = []
 
     for i in range(num_ipv6):
-        address = input("\033[93m" + f"Enter \033[92mKharej\033[93m IPV6 address: " + "\033[0m")
+        print("\033[93m──────────────────────────────\033[0m")
+        print(f"\033[92m      --- Config\033[96m {i+1}\033[92m ---\033[0m")
+        print("\033[93m──────────────────────────────\033[0m")
         port = input("\033[93m" + f"Enter\033[92m Kharej\033[93m Config \033[92m{i+1}\033[93m port: " + "\033[0m")
-        ipv6_addresses.append(address)
         ipv6_ports.append(port)
         iran_port = input(f"\033[93mEnter \033[92mhaproxy \033[93mport \033[96mConfig \033[92m{i+1}\033[93m: \033[0m")
         iran_ports.append(iran_port)
+
+    ipv6_addresses = [ipv4_address] * num_ipv6
 
     config = haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_ports)
 

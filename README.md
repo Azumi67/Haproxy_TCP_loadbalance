@@ -66,6 +66,46 @@
 
  <div align="right">
   <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 4</summary>
+
+
+
+
+  <p align="right">
+    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/c0e473e3-6aff-4019-9dec-be82f68757d3" alt="menu screen" />
+  </p>
+
+
+- تعداد کانفیگ های خود را وارد کنید. من دو عدد کانفیگ با پورت های 8080 و 8081 دارم . پس عدد 2 را وارد میکنم.
+- ایپی 4 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
+- برای هر پورت خارج، پورتی دیگر برای HAPROXY انتخاب میکنم. به طور مثال برای پورت اول 8080 همان پورت 8080 را انتخاب میکنم. اینگونه دیگر پورت کانفیگ تغییری نخواهد کرد.
+- در اخر ایپی ایران و پورت به شما نمایش داده میشود که در کلاینت V2RAYNG استفاده میکنید. باید ان را تغییر دهید تا کانفیگ شما کار کند.
+
+  </details>
+</div>
+
+<div align="right">
+  <details>
+    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 6</summary>
+
+
+
+
+  <p align="right">
+    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/b1d18ea8-46ed-43fc-8b3e-e5f4db81acb0" alt="menu screen" />
+  </p>
+
+
+- تعداد کانفیگ های خود را وارد کنید. من دو عدد کانفیگ با پورت های 8080 و 8081 دارم . پس عدد 2 را وارد میکنم.
+- ایپی 6 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
+- برای هر پورت خارج، پورتی دیگر برای HAPROXY انتخاب میکنم. به طور مثال برای پورت اول 8080 همان پورت 8080 را انتخاب میکنم. اینگونه دیگر پورت کانفیگ تغییری نخواهد کرد.
+- در اخر ایپی ایران و پورت به شما نمایش داده میشود که در کلاینت V2RAYNG استفاده میکنید. باید ان را تغییر دهید تا کانفیگ شما کار کند.
+
+  </details>
+</div>
+
+ <div align="right">
+  <details>
     <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> ساخت پرایوت ایپی سرور خارج</summary>
   
  <p align="right">
@@ -167,45 +207,6 @@
   </details>
 </div>
 
- <div align="right">
-  <details>
-    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 4</summary>
-
-
-
-
-  <p align="right">
-    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/c0e473e3-6aff-4019-9dec-be82f68757d3" alt="menu screen" />
-  </p>
-
-
-- تعداد کانفیگ های خود را وارد کنید. من دو عدد کانفیگ با پورت های 8080 و 8081 دارم . پس عدد 2 را وارد میکنم.
-- ایپی 4 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
-- برای هر پورت خارج، پورتی دیگر برای HAPROXY انتخاب میکنم. به طور مثال برای پورت اول 8080 همان پورت 8080 را انتخاب میکنم. اینگونه دیگر پورت کانفیگ تغییری نخواهد کرد.
-- در اخر ایپی ایران و پورت به شما نمایش داده میشود که در کلاینت V2RAYNG استفاده میکنید. باید ان را تغییر دهید تا کانفیگ شما کار کند.
-
-  </details>
-</div>
-
-<div align="right">
-  <details>
-    <summary><strong><img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/fcbbdc62-2de5-48aa-bbdd-e323e96a62b5" alt="Image"> </strong> تانل ساده با ایپی 6</summary>
-
-
-
-
-  <p align="right">
-    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/b1d18ea8-46ed-43fc-8b3e-e5f4db81acb0" alt="menu screen" />
-  </p>
-
-
-- تعداد کانفیگ های خود را وارد کنید. من دو عدد کانفیگ با پورت های 8080 و 8081 دارم . پس عدد 2 را وارد میکنم.
-- ایپی 6 سرور خارج را وارد نمایید و سپس به ترتیب پورت های کانفیگ را وارد نمایید
-- برای هر پورت خارج، پورتی دیگر برای HAPROXY انتخاب میکنم. به طور مثال برای پورت اول 8080 همان پورت 8080 را انتخاب میکنم. اینگونه دیگر پورت کانفیگ تغییری نخواهد کرد.
-- در اخر ایپی ایران و پورت به شما نمایش داده میشود که در کلاینت V2RAYNG استفاده میکنید. باید ان را تغییر دهید تا کانفیگ شما کار کند.
-
-  </details>
-</div>
 
 ------------------------------------------
 

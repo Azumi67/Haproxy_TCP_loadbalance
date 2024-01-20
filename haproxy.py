@@ -158,10 +158,11 @@ def main_menu():
             print(border)
             print("1. \033[92mPrivate | Native IP\033[0m")
             print("2. \033[93mHaproxy Simpe tunnel | \033[92m IPV4 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
-            print("3. \033[96mHaproxy loadbalance  | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
-            print("4. \033[97mHaproxy Loadbalance \033[93m| \033[92mNo Tunnel \033[93m| \033[96mRun on Kharej\033[0m")
-            print("5. \033[93mStop | Start | Restart Service\033[0m")
-            print("6. \033[91mUninstall\033[0m")
+            print("3. \033[96mHaproxy Simpe tunnel | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
+            print("4. \033[93mHaproxy loadbalance  | \033[92m IPV6 Tunnel   \033[93m| \033[96mRun on IRAN\033[0m")
+            print("6. \033[97mHaproxy Loadbalance \033[93m| \033[92mNo Tunnel \033[93m| \033[96mRun on Kharej\033[0m")
+            print("7. \033[93mStop | Start | Restart Service\033[0m")
+            print("8. \033[91mUninstall\033[0m")
             print("0. Exit")
             print("\033[93m╰─────────────────────────────────────────────────────────────────────╯\033[0m")
 
@@ -172,12 +173,14 @@ def main_menu():
             elif choice == '2':
                 haproxy2_menu()
             elif choice == '3':
-                haproxy_menu()
+                haproxy3_menu()
             elif choice == '4':
-                haproxy_kharej()
+                haproxy_menu()
             elif choice == '5':
-                restart_service()
+                haproxy_kharej()
             elif choice == '6':
+                restart_service()
+            elif choice == '7':
                 remove_menu()
             elif choice == '0':
                 print("Exiting...")
@@ -884,8 +887,8 @@ backend azumi_backend
         config += f"    server azumi{i+1} {ipv6_address}:{ipv6_port} check\n"
     return config
     
-def haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_port):
-    config = f"""\
+def haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_ports):
+    config = '''\
 global
     log /dev/log local0
     log /dev/log local1 notice
@@ -920,20 +923,24 @@ defaults
     errorfile 503 /etc/haproxy/errors/503.http
     errorfile 504 /etc/haproxy/errors/504.http
 
-frontend vless_frontend
-    bind *:{iran_port}
-    mode tcp
-    default_backend azumi_backend
+'''
 
-backend azumi_backend
-    mode tcp
-
-"""
-    
     for i in range(len(ipv6_addresses)):
         ipv6_address = ipv6_addresses[i]
         ipv6_port = ipv6_ports[i]
-        config += f"    server azumi{i+1} {ipv6_address}:{ipv6_port} \n"
+        iran_port = iran_ports[i]
+        frontend_name = f'vless{i+1}_frontend'
+        backend_name = f'azumi{i+1}_backend'
+        config += f'''
+frontend {frontend_name}
+    bind *:{ipv6_port}
+    mode tcp
+    default_backend {backend_name}
+
+backend {backend_name}
+    mode tcp
+    server azumi{i+1} {ipv6_address}:{ipv6_port}
+'''
     return config
     
 def haproxy_menu():
@@ -988,22 +995,23 @@ def haproxy2_menu():
     print("\033[92m(\033[91mO,O\033[92m)\033[0m")
     print("\033[92m(   ) \033[93mHaproxy Simple IPV4 Tunnel Menu\033[0m")
     print("\033[92m \"-\"\033[93m════════════════════════════════════\033[0m")
-    display_notification("\033[93mConfigruing Haproxy...\033[0m")
+    display_notification("\033[93mConfiguring Haproxy...\033[0m")
     install_haproxy()
     print("\033[93m╭──────────────────────────────────────────────────────────╮\033[0m")
     num_ipv6 = int(input("\033[93mEnter the number of \033[92mKharej \033[96mConfigs\033[93m:\033[0m "))
     ipv6_addresses = []
     ipv6_ports = []
+    iran_ports = []
 
     for i in range(num_ipv6):
-        address = input("\033[93m" + f"Enter \033[92mKharej\033[93m IPV4 address \033[92m{i+1}: " + "\033[0m")
-        port = input("\033[93m" + f"Enter the port for \033[92mKharej\033[93m IPV4 address \033[92m{i+1}: " + "\033[0m")
+        address = input("\033[93m" + f"Enter \033[92mKharej\033[93m IPV4 address: " + "\033[0m")
+        port = input("\033[93m" + f"Enter\033[92m Kharej\033[93m Config \033[92m{i+1}\033[93m port: " + "\033[0m")
         ipv6_addresses.append(address)
         ipv6_ports.append(port)
+        iran_port = input(f"\033[93mEnter \033[92mhaproxy \033[93mport \033[96mConfig \033[92m{i+1}\033[93m: \033[0m")
+        iran_ports.append(iran_port)
 
-    iran_port = input("\033[93m" + "Enter the port for \033[92mIran\033[0m" + " Server: ")
-    config = haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_port)
-
+    config = haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_ports)
 
     save_haproxy(config)
     sleep(1)
@@ -1016,7 +1024,50 @@ def haproxy2_menu():
 
     if current_ipv4:
         print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
-        print(f"\033[93m| V2rayng Address: {current_ipv4} : {iran_port}  \033[0m")
+        for i in range(num_ipv6):
+            print(f"\033[93m| V2rayng Address {i+1}: {current_ipv4} : {iran_ports[i]}  \033[0m")
+        print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
+    else:
+        print("\033[93mUnable to retrieve server's IPv4 address.\033[0m")
+        
+
+def haproxy3_menu():
+    subprocess.run("clear", shell=True)
+    print("\033[92m ^ ^\033[0m")
+    print("\033[92m(\033[91mO,O\033[92m)\033[0m")
+    print("\033[92m(   ) \033[93mHaproxy Simple IPV6 Tunnel Menu\033[0m")
+    print("\033[92m \"-\"\033[93m════════════════════════════════════\033[0m")
+    display_notification("\033[93mConfiguring Haproxy...\033[0m")
+    install_haproxy()
+    print("\033[93m╭──────────────────────────────────────────────────────────╮\033[0m")
+    num_ipv6 = int(input("\033[93mEnter the number of \033[92mKharej \033[96mConfigs\033[93m:\033[0m "))
+    ipv6_addresses = []
+    ipv6_ports = []
+    iran_ports = []
+
+    for i in range(num_ipv6):
+        address = input("\033[93m" + f"Enter \033[92mKharej\033[93m IPV6 address: " + "\033[0m")
+        port = input("\033[93m" + f"Enter\033[92m Kharej\033[93m Config \033[92m{i+1}\033[93m port: " + "\033[0m")
+        ipv6_addresses.append(address)
+        ipv6_ports.append(port)
+        iran_port = input(f"\033[93mEnter \033[92mhaproxy \033[93mport \033[96mConfig \033[92m{i+1}\033[93m: \033[0m")
+        iran_ports.append(iran_port)
+
+    config = haproxy2_tunnel(ipv6_addresses, ipv6_ports, iran_ports)
+
+    save_haproxy(config)
+    sleep(1)
+    restart_haproxy()
+    print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
+
+    display_checkmark("\033[92mHAProxy configuration file generated!\033[0m")
+
+    current_ipv4 = get_ipv4()
+
+    if current_ipv4:
+        print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
+        for i in range(num_ipv6):
+            print(f"\033[93m| V2rayng Address {i+1}: {current_ipv4} : {iran_ports[i]}  \033[0m")
         print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
     else:
         print("\033[93mUnable to retrieve server's IPv4 address.\033[0m")

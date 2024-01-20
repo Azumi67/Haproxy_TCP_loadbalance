@@ -223,9 +223,10 @@
 
 <details>
   <summary align="right">برای مشاهده اسکرین کلیک کنید</summary>
-  
+
+
   <p align="right">
-    <img src="https://github.com/Azumi67/Rathole_reverseTunnel/assets/119934376/9e744610-6651-4f20-8375-20505742cbbf" alt="menu screen" />
+    <img src="https://github.com/Azumi67/Haproxy_TCP_loadbalance/assets/119934376/95fde86b-7163-4dcc-8ff1-aa9b52a9edd3" alt="menu screen" />
   </p>
 </details>
 
